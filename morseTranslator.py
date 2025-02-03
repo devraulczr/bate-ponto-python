@@ -42,7 +42,9 @@ def morse():
     palavra = entry.get()
     cod = []
     for letra in palavra:
-        if letra.upper() in LETTERS:
+        if letra == " ":
+            cod.append("/")
+        elif letra.upper() in LETTERS:
             posicao = LETTERS.index(letra.upper())
             cod.append(MORSES[posicao])
             
